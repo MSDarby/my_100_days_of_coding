@@ -25,18 +25,15 @@ print("Your mission is to find the treasure.")
 
 first_decision = input("You\'re at a cross road. "
                        "Where do you want to go, left or right? "
-                       "Please type left or right: ")
-first_decision = first_decision.upper()
+                       "Please type left or right: ").upper()
 if first_decision == 'LEFT':
     second_decision = input("You are at a lake. Do you want to "
                             "swim across or wait for the boat?"
-                            "Please type swim or wait: ")
-    second_decision = second_decision.upper()
+                            "Please type swim or wait: ").upper()
     if second_decision == 'WAIT':
         third_decision = input("You are at a cross road. Which "
                                "door do you want to go through? "
-                               "Please type red, blue or yellow: ")
-        third_decision = third_decision .upper()
+                               "Please type red, blue or yellow: ").upper()
         if third_decision == 'YELLOW':
             print("You win!!!")
         elif third_decision == 'RED':
