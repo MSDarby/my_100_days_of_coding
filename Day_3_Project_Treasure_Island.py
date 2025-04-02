@@ -23,31 +23,33 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.")
 
-first_decision = input("You\'re at a cross road. where do you want to go, left or right? "
+first_decision = input("You\'re at a cross road. "
+                       "Where do you want to go, left or right? "
                        "Please type left or right: ")
-if first_decision == 'left':
-    second_decision = input("You now have a large lake to cross. Do you "
-                            "want to swim across or wait for the boat? "
+first_decision = first_decision.upper()
+if first_decision == 'LEFT':
+    second_decision = input("You are at a lake. Do you want to "
+                            "swim across or wait for the boat?"
                             "Please type swim or wait: ")
-    if second_decision == 'wait':
-        third_decision = input("You are now at a cross road. "
-                               "you will need to choose a door to pass through"
-                               "Please choose the red, blue or yellow door."
+    second_decision = second_decision.upper()
+    if second_decision == 'WAIT':
+        third_decision = input("You are at a cross road. Which "
+                               "door do you want to go through? "
                                "Please type red, blue or yellow: ")
-        if third_decision == 'yellow':
+        third_decision = third_decision .upper()
+        if third_decision == 'YELLOW':
             print("You win!!!")
-        elif third_decision == 'red':
+        elif third_decision == 'RED':
             print("You have been burnt by fire.\nGame Over!")
-        elif third_decision == 'blue':
+        elif third_decision == 'BLUE':
             print("You have been eaten by beasts.\nGame Over!")
         else:
             print("Invalid option chosen.\nGame Over!")
-    elif second_decision == 'swim':
+    elif second_decision == 'SWIM':
         print("You have been attacked by trout.\nGame Over!")
     else:
         print("Invalid option chosen.\nGame Over!")
-elif first_decision == 'right':
+elif first_decision == 'RIGHT':
     print("You have fallen into a hole.\nGame Over!")
 else:
     print("Invalid option chosen.\nGame Over!")
-
