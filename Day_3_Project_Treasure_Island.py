@@ -35,7 +35,7 @@ if first_decision == 'LEFT':
                                "door do you want to go through? "
                                "Please type red, blue or yellow: ").upper()
         if third_decision == 'YELLOW':
-            print("You win!!!")
+            print("You have found the treasure.\nYou win!!!")
         elif third_decision == 'RED':
             print("You have been burnt by fire.\nGame Over!")
         elif third_decision == 'BLUE':
