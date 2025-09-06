@@ -3,11 +3,11 @@ from higherlower_art import logo, vs
 from higherlowergame_data import data
 
 
-def format_data(num): 
+def format_data(account): 
     '''This is a function to format the A and B message in the game'''
-    name=data[num]['name']
-    describe=data[num]['description']
-    country=data[num]['country']
+    name=account['name']
+    describe=account['description']
+    country=account['country']
     return f"{name}, a {describe}, from {country}."
 
 
@@ -32,16 +32,19 @@ while winning:
         
     print(f"Compare A: {format_data(A)}.")
     print(vs)
-    print(f"Against B: {format_data(B)}.")
-
-
-    A_count=data[A]['follower_count']
-    B_count=data[B]['follower_count']
-
-    
+    print(f"Against B: {format_data(B)}.")    
     guess = input("Who has more followers? Type A or B: \n").upper()
 
+    print("\n" * 20)
+    print(logo)
+
+
+    A_count=A['follower_count']
+    B_count=B['follower_count']
+
     is_correct = check_guess(guess, A_count, B_count)
+
+
     if is_correct:
         score+=1
         print(f'''You're right! Current score: {score}.''')
